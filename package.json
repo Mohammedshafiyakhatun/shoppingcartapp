@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/Mohammedshafiyakhatun/shoppingcartapp.git",
+  "homepage": "https://Mohammedshafiyakhatun.github.io/shoppingcartapp",
   "name": "react",
   "private": true,
   "version": "0.0.0",
@@ -7,10 +7,12 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+    
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.0",
