@@ -18,7 +18,7 @@ function Cart() {
             <div key={index} className="card bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                 <img
-                  src={item.thumbnail}   // or item.images[0]
+                  src={item.thumbnail}   
                   alt={item.title}
                   className="rounded-xl h-40 object-cover"
                 />
