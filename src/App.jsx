@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/shoppingcartapp">
       <div className="container m-auto">
       <Routes >
           
@@ -25,6 +25,7 @@ function App() {
       
 </div>
     </BrowserRouter>
+  
   );
 }
 
