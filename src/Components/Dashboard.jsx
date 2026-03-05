@@ -9,14 +9,24 @@ import {useParams} from 'react-router-dom'
   };
     
   return (
-    <div className='card m-50 p-20 flex justify-center align-items-center  bg-error ' >
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
 
-      <h1 className=' itallic font-bold text-2xl align-items-center'>Dashboard</h1>
-      
-      <button  className='bg-success-content text-white padding-20 mt-20' onClick={gotohome}> Logout</button>
-      
-      
-    </div>
+  <div className="bg-white p-8 rounded-lg shadow-lg w-80 text-center">
+
+    <h1 className="italic font-bold text-2xl border-2 border-blue-500 p-2 mb-4">
+      Dashboard
+    </h1>
+
+    <button
+      className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+      onClick={gotohome}
+    >
+      Logout
+    </button>
+
+  </div>
+
+</div>
   )
 }
 export {Dashboard}

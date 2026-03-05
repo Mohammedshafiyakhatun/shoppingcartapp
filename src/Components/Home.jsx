@@ -36,19 +36,17 @@ const gotodash=()=>{
 }
 
   return (
-    <div className="min-h-screen bg-base-200 p-6">
-      <div className="flex justify-between items-center mb-6 bg-secondary">
-        <h1 className="text-3xl uppercase font-bold  text-primary ">SMILE-STORE</h1>
-      <div className="flex justify-center my-6">
-  <input
-    type="text"
-    placeholder="Search products..."
-    className="input input-bordered input-primary w-full max-w-md"
-  />
-   <button className="btn btn-warning" onClick={gotodash}>dashboard</button>
-</div>
-
-
+    <div className="min-h-screen  bg-blue-100 p-6 flex flex-col ">
+      <div className="flex justify-between items-center mb-6 ml-6 bg-white rounded-lg shadow-md p-4">
+        <h1 className="text-3xl uppercase font-bold text-primary">SMILE-STORE</h1>
+        <div className="flex justify-center gap-4">
+          <input
+            type="text"
+            placeholder="Search products..."
+            className="input input-bordered input-primary w-full max-w-md"
+          />
+          <button className="btn btn-warning" onClick={gotodash}>dashboard</button>
+        </div>
         <button
           onClick={goToCart}
           className="badge badge-primary p-4 text-lg cursor-pointer"
@@ -57,38 +55,37 @@ const gotodash=()=>{
         </button>
       </div>
 
-
-      {loading ? (
-        <div className="text-center text-xl bg-accent">Loading products...</div>
-      ) : (
-        <div className="grid grid-cols-3 gap-4 bg-accent">
-          {products.map((product) => (
-            <div key={product.id} className="card bg-base-100 shadow-xl flex justify-center align-items-center ml-10 mt-10 mr-5 ">
-              <figure>
-                <img
-                  src={product.thumbnail}
-                  alt={product.title}
-                  className="h-40 w-full object-cover"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">{product.title}</h2>
-                <p className="font-semibold">₹ {product.price}</p>
-                <div className="card-actions justify-end">
-                  <button
-                    className="btn btn-secondary"
-                    onClick={() => addToCart(product)}
-                  >
-                    - Add +
-                  </button>
-                 
-                  
+      <div className="flex flex-1 justify-center  ">
+        {loading ? (
+          <div className="text-center text-xl">Loading products...</div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 ">
+            {products.map((product) => (
+              <div key={product.id} className="card bg-white shadow-lg hover:shadow-xl transition-shadow">
+                <figure>
+                  <img
+                    src={product.thumbnail}
+                    alt={product.title}
+                    className="h-56 w-full object-cover"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title text-lg">{product.title}</h2>
+                  <p className="font-semibold text-primary">₹ {product.price}</p>
+                  <div className="card-actions justify-end">
+                    <button
+                      className="btn btn-secondary"
+                      onClick={() => addToCart(product)}
+                    >
+                      - Add +
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
