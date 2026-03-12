@@ -45,11 +45,11 @@ const gotodash=()=>{
             placeholder="Search products..."
             className="input input-bordered input-primary w-full max-w-md"
           />
-          <button className="btn btn-warning" onClick={gotodash}>dashboard</button>
+          <button className="btn btn-warning mr-5" onClick={gotodash}>dashboard</button>
         </div>
         <button
           onClick={goToCart}
-          className="badge badge-primary p-4 text-lg cursor-pointer"
+          className="badge badge-primary p-6 text-lg cursor-pointer"
         >
           Cart: {cart.length}
         </button>
