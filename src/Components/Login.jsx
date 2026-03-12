@@ -9,10 +9,11 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (email === "shafu@gmail.com" && password === "1234567") {
+    
+    if (email && password) {
       navigate("/home");
     } else {
-      alert("Invalid Credentials");
+      alert("Please enter both email and password");
     }
   };
 
